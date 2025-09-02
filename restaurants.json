@@ -2110,5 +2110,60 @@
     "MapsURL": "https://www.google.com/maps/@52.6307519,4.7498614,17z/data=!3m1!4b1!4m5!3m4!1s0x47cf57b5bccb9a9f:0x59536a3c4d651aa!8m2!3d52.6307519!4d4.7498614",
     "Tap Water Policy": "Yes, for free",
     "Comments": "Glass of water ordered with coffee without problems"
+  },
+  {
+    "Restaurant Name": "Roast",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "Address": "Middellandplein 21B",
+    "Latitude": 51.9180799,
+    "Longitude": 4.4578547,
+    "MapsURL": "https://www.google.com/maps/@51.9180799,4.4578547,17z/data=!3m1!4b1!4m5!3m4!1s0x47c435527edfae11:0x60a54364dd0f5024!8m2!3d51.9180799!4d4.4578547",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Harvest",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "Address": "Glashaven 105-107",
+    "Latitude": 51.9157692,
+    "Longitude": 4.4858486,
+    "MapsURL": "https://www.google.com/maps/@51.9157692,4.4858486,17z/data=!3m1!4b1!4m5!3m4!1s0x47c4335d9ab9d5fb:0x42745c4953c7578c!8m2!3d51.9157692!4d4.4858486",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "By Jarmusch",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "Address": "Het Industriegebouw, Goudsesingel 64",
+    "Latitude": 51.9238809,
+    "Longitude": 4.4929323,
+    "MapsURL": "https://www.google.com/maps/@51.9238809,4.4929323,17z/data=!3m1!4b1!4m5!3m4!1s0x47c43345158f94f9:0x9f360b64de633e03!8m2!3d51.9238809!4d4.4929323",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Dr. Feelgood's Burgers",
+    "Country": "Netherlands",
+    "City": "Eindhoven",
+    "Address": "Stratumseind Square, Oude Stadsgracht 28",
+    "Latitude": 51.4359518,
+    "Longitude": 5.4822785,
+    "MapsURL": "https://www.google.com/maps/@51.4359518,5.4822785,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6d9debfc18d13:0xd9ce17a552a05069!8m2!3d51.4359518!4d5.4822785",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Atithi Indian Restaurant",
+    "Country": "Netherlands",
+    "City": "Eindhoven",
+    "Address": "Nieuwe Emmasingel 60",
+    "Latitude": 51.4394146,
+    "Longitude": 5.4756079,
+    "MapsURL": "https://www.google.com/maps/@51.4394146,5.4756079,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6d9da475e79f9:0x4faaafb0f4eaf49!8m2!3d51.4394146!4d5.4756079",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€4.95"
   }
 ]
