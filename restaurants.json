@@ -2165,5 +2165,93 @@
     "MapsURL": "https://www.google.com/maps/@51.4394146,5.4756079,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6d9da475e79f9:0x4faaafb0f4eaf49!8m2!3d51.4394146!4d5.4756079",
     "Tap Water Policy": "No, they charge high price",
     "Comments": "€4.95"
+  },
+  {
+    "Restaurant Name": "Cafe Sjiek",
+    "Country": "Netherlands",
+    "City": "Maastricht",
+    "Address": "Sint Pieterstraat 13",
+    "Latitude": 50.845361,
+    "Longitude": 5.692424,
+    "MapsURL": "https://www.google.com/maps/@50.845361,5.692424,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0e9bba43a7aef:0x33cab1d0f46e43cf!8m2!3d50.845361!4d5.692424",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€3.50"
+  },
+  {
+    "Restaurant Name": "De Bóbbel",
+    "Country": "Netherlands",
+    "City": "Maastricht",
+    "Address": "Wolfstraat 32",
+    "Latitude": 50.848061,
+    "Longitude": 5.692602,
+    "MapsURL": "https://www.google.com/maps/@50.848061,5.692602,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0e9b97b1457c9:0xe9086914a1d0af75!8m2!3d50.848061!4d5.692602",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Brownies&downieS",
+    "Country": "Netherlands",
+    "City": "Roermond",
+    "Address": "Munsterplein 20",
+    "Latitude": 51.1937835,
+    "Longitude": 5.988071,
+    "MapsURL": "https://www.google.com/maps/@51.1937835,5.988071,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0b4b352403685:0xdd6ed6045b553532!8m2!3d51.1937835!4d5.988071",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€3.20"
+  },
+  {
+    "Restaurant Name": "Roast Factory",
+    "Country": "Netherlands",
+    "City": "Den Haag",
+    "Address": "Brouwersgracht 4",
+    "Latitude": 52.0735493,
+    "Longitude": 4.3059623,
+    "MapsURL": "https://www.google.com/maps/@52.0735493,4.3059623,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b70be2bc276b:0x73cf7071598914d8!8m2!3d52.0735493!4d4.3059623",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Karibu",
+    "Country": "Netherlands",
+    "City": "Utrecht",
+    "Address": "Hooghiemstraplein 55",
+    "Latitude": 52.098652,
+    "Longitude": 5.1249032,
+    "MapsURL": "https://www.google.com/maps/@52.098652,5.1249032,17z/data=!3m1!4b1!4m5!3m4!1s0x47c66f6a59514adb:0xe1bf2c1356244b92!8m2!3d52.098652!4d5.1249032",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Tastes from the lowlands",
+    "Country": "Netherlands",
+    "City": "Amsterdam Schiphol",
+    "Address": "Vertrekpassage 10 Luchthaven",
+    "Latitude": 52.3102536,
+    "Longitude": 4.7623646,
+    "MapsURL": "https://www.google.com/maps/@52.3102536,4.7623646,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e10ea91a1395:0xcc73760031904780!8m2!3d52.3102536!4d4.7623646",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€5+"
+  },
+  {
+    "Restaurant Name": "Ichisin Ramen Hokkaido",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Amstelstraat 18",
+    "Latitude": 52.3661372,
+    "Longitude": 4.8992908,
+    "MapsURL": "https://www.google.com/maps/@52.3661372,4.8992908,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6090079663acd:0xaa2c8b8cd11d322d!8m2!3d52.3661372!4d4.8992908",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€1.5 for a very tiny cup"
+  },
+  {
+    "Restaurant Name": "Blushing",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Paulus Potterstraat 30A",
+    "Latitude": 52.3588108,
+    "Longitude": 4.8803584,
+    "MapsURL": "https://www.google.com/maps/@52.3588108,4.8803584,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609ef84312b37:0x3b945b98b15e15c7!8m2!3d52.3588108!4d4.8803584",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "Tap water denied, only bottled available"
   }
 ]
