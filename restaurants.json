@@ -2616,5 +2616,82 @@
     "MapsURL": "https://www.google.com/maps/@52.3647717,4.8826598,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609e85e64cc03:0x699021099792d8d3!8m2!3d52.3647717!4d4.8826598",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
+  },
+  {
+    "Restaurant Name": "Samrat",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Bethaniëndwarsstraat 17",
+    "Latitude": 52.3713842,
+    "Longitude": 4.8979151,
+    "MapsURL": "https://www.google.com/maps/@52.3713842,4.8979151,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609bf2fd6429b:0x39988ca7e70de9f0!8m2!3d52.3713842!4d4.8979151",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Poseidon",
+    "Country": "Netherlands",
+    "City": "Oud-Beijerland",
+    "Address": "Vierwiekenplein 106",
+    "Latitude": 51.8272876,
+    "Longitude": 4.4100476,
+    "MapsURL": "https://www.google.com/maps/@51.8272876,4.4100476,17z/data=!3m1!4b1!4m5!3m4!1s0x47c43658afe4018b:0x92b25662a4b9e05a!8m2!3d51.8272876!4d4.4100476",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Koffie leute",
+    "Country": "Netherlands",
+    "City": "Utrecht",
+    "Address": "Westerkade 30",
+    "Latitude": 52.0794752,
+    "Longitude": 5.1225502,
+    "MapsURL": "https://www.google.com/maps/@52.0794752,5.1225502!15sChRrb2ZmaWUgbGV1dGUgdXRyZWNodFoWIhRrb2ZmaWUgbGV1dGUgdXRyZWNodJIBC2NvZmZlZV9zaG9w4AEA,17z/data=!3m1!4b1!4m5!3m4!1skoffie+leute+utrecht!8m2!3d52.0794752!4d5.1225502!15sChRrb2ZmaWUgbGV1dGUgdXRyZWNodFoWIhRrb2ZmaWUgbGV1dGUgdXRyZWNodJIBC2NvZmZlZV9zaG9w4AEA",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Witsand",
+    "Country": "Netherlands",
+    "City": "Noordwijk aan Zee",
+    "Address": "Zeereep 103",
+    "Latitude": 52.2520178,
+    "Longitude": 4.4345207,
+    "MapsURL": "https://www.google.com/maps/@52.2520178,4.4345207,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5c07233f7dcc7:0x811eefac535752df!8m2!3d52.2520178!4d4.4345207",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "Only bottled water for 7 euro's"
+  },
+  {
+    "Restaurant Name": "Boulevard 17",
+    "Country": "Netherlands",
+    "City": "Vlissingen",
+    "Address": "Boulevard Evertsen 2",
+    "Latitude": 51.4487178,
+    "Longitude": 3.5613775,
+    "MapsURL": "https://www.google.com/maps/@51.4487178,3.5613775,17z/data=!3m1!4b1!4m5!3m4!1s0x47c4992d53675fab:0x4bf05d770561b9a4!8m2!3d51.4487178!4d3.5613775",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "approx 4 euro for a glass of tap water"
+  },
+  {
+    "Restaurant Name": "De Koornbeurs",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Voldersgracht 1",
+    "Latitude": 52.011755,
+    "Longitude": 4.357807,
+    "MapsURL": "https://www.google.com/maps/@52.011755,4.357807,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3bb9624a7:0xcde5aeed1392f3f8!8m2!3d52.011755!4d4.357807",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "De Hemel",
+    "Country": "Netherlands",
+    "City": "Nijmegen",
+    "Address": "Franseplaats 1",
+    "Latitude": 51.8487892,
+    "Longitude": 5.8643398,
+    "MapsURL": "https://www.google.com/maps/@51.8487892,5.8643398,17z/data=!3m1!4b1!4m5!3m4!1s0x47c70844035e4a0f:0x17b0488bd7c0c81!8m2!3d51.8487892!4d5.8643398",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
   }
 ]
