@@ -588,12 +588,20 @@ document.addEventListener('click', (e)=>{
 
     function createMarker(item) {
         const category = getCategory(item["Tap Water Policy"]);
-        state.countsTotal[category]++;
+
+        // FIX: comprobamos primero si es un duplicado (mismas coordenadas).
+        // Antes se incrementaba countsTotal ANTES de esta comprobación,
+        // lo que hacía que "Totals" contara filas duplicadas del JSON
+        // mientras que "Filtered Counters" (basado en allMarkers) no las contaba,
+        // provocando que ambos contadores de la página nunca coincidieran.
         const existingMarker = state.allMarkers.find(m => 
             m.marker.getLatLng().lat === item.Latitude && 
             m.marker.getLatLng().lng === item.Longitude
         );
         if (existingMarker) return;
+
+        // Solo contamos si el restaurante es único
+        state.countsTotal[category]++;
 
         const marker = L.marker([item.Latitude, item.Longitude], {
             icon: getColoredIcon(category),
