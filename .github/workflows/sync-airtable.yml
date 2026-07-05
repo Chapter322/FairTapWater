@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Sync data from Airtable (+ geocode)
+      - name: Sync data from Airtable
         env:
           AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
           AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
@@ -41,11 +41,11 @@ jobs:
             git push
           fi
 
-      - name: Notify pending manual review (persistent issue -> email)
+      - name: Notify pending submissions (persistent issue -> email)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          EXISTING=$(gh issue list --label needs-geocoding --state open --json number --jq '.[0].number' || true)
+          EXISTING=$(gh issue list --label needs-url --state open --json number --jq '.[0].number' || true)
 
           if [ -s needs_review.md ]; then
             if [ -n "$EXISTING" ]; then
@@ -54,30 +54,15 @@ jobs:
             else
               echo "Creating new pending-review issue"
               gh issue create \
-                --title "Restaurants pending manual review" \
+                --title "New submissions waiting for a Maps URL" \
                 --body-file needs_review.md \
-                --label needs-geocoding
+                --label needs-url
             fi
           else
             if [ -n "$EXISTING" ]; then
               echo "Everything resolved, closing issue #$EXISTING"
-              gh issue close "$EXISTING" --comment "Everything was resolved automatically. ✅"
+              gh issue close "$EXISTING" --comment "No pending submissions right now. ✅"
             else
               echo "Nothing pending."
             fi
-          fi
-
-      - name: Notify new entries this run (fresh issue -> email)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          if [ -s new_entries.md ]; then
-            TODAY=$(date -u +"%Y-%m-%d")
-            echo "Creating issue for today's new entries ($TODAY)"
-            gh issue create \
-              --title "New restaurants auto-geocoded - $TODAY" \
-              --body-file new_entries.md \
-              --label new-entries
-          else
-            echo "No new entries in this run."
           fi
