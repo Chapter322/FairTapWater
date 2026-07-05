@@ -1,29 +1,41 @@
 #!/usr/bin/env python3
 """
-Syncs Airtable <-> restaurants.json, automating the full pipeline:
+Syncs Airtable -> restaurants.json, auto-filling Address/City/Country
+for new submissions, and notifying about the ones still waiting for a
+manually-added Google Maps URL.
 
+Pipeline:
   Form (Youform) -> Zapier -> Airtable "GridView"
-      -> [this script] geocodes, fills in Country/City/Address/URL
-      -> Airtable computes Latitude/Longitude/MapsURL (formulas from URL)
-      -> restaurants.json -> commit to GitHub
+      -> [this script] geocodes with Nominatim (OpenStreetMap) and
+         fills in Address/City/Country automatically when confident
+      -> [you] search Google Maps by hand, paste the real URL into
+         the "URL" field (a quick search link is provided for each
+         pending item to speed this up)
+      -> Airtable computes Latitude/Longitude/MapsURL from that URL
+         (unchanged, untouched formulas -> real, high-quality links
+         with Google's own place_id when available)
+      -> [this script, next run] builds restaurants.json and commits it
 
 Key rules:
-- We NEVER write to Latitude/Longitude/MapsURL (they are formula fields ->
-  the API would reject the write). Instead we write to "URL" using a
-  "!3d..!4d.." pattern that those formulas already understand.
+- This script NEVER writes to URL, Latitude, Longitude or MapsURL.
+  Those stay exactly as they are today: you paste a real Google Maps
+  URL, and your existing formulas compute the rest.
 - "City" and "Country" are Single Select fields. To avoid duplicate
   options caused by typos, casing, or language differences in the free
   text, we ONLY auto-assign a value if the geocoded result matches
   (case/whitespace-insensitive) an option that ALREADY EXISTS in the
-  field. If there's no match, we leave it unset and flag it for manual
-  review (even though Address/URL do get filled in).
+  field. If there's no match, it's left unset and flagged in the
+  notification so you can confirm/create it while filling in the URL.
 
 Outputs for the GitHub Actions workflow:
-  restaurants.json  -> committed if it changed
-  needs_review.md   -> pending issues (persistent issue: updated/closed
-                        automatically, never duplicated)
-  new_entries.md    -> this run's new additions, for an accuracy review
-                        (a fresh issue is created every time there's content)
+  restaurants.json  -> committed if it changed. Only includes records
+                        with a name, coordinates, a confirmed city and
+                        a confirmed country (i.e. fully processed ones).
+  needs_review.md   -> new submissions still waiting for a URL, with
+                        whatever Address/City/Country could be
+                        auto-detected plus a quick search link
+                        (persistent issue: updated/closed automatically,
+                        never duplicated)
 
 Required environment variables:
   AIRTABLE_TOKEN      -> PAT with data.records:read, data.records:write,
@@ -51,7 +63,6 @@ META_URL = f"https://api.airtable.com/v0/meta/bases/{AIRTABLE_BASE_ID}/tables"
 
 OUTPUT_PATH = "restaurants.json"
 REVIEW_PATH = "needs_review.md"
-NEW_ENTRIES_PATH = "new_entries.md"
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 NOMINATIM_HEADERS = {
@@ -103,7 +114,8 @@ def chunked(items, size):
 
 def push_updates_to_airtable(updates):
     """updates: list of {"id": recordId, "fields": {...}}.
-    Only EDITABLE fields (never Latitude/Longitude/MapsURL)."""
+    Only ever contains Address/City/Country -> never URL/Latitude/
+    Longitude/MapsURL."""
     for batch in chunked(updates, 10):  # Airtable allows max 10 per PATCH
         airtable_request(RECORDS_URL, method="PATCH", body={"records": batch})
         time.sleep(0.25)
@@ -168,8 +180,6 @@ def _is_precise_enough(result):
     addr = result.get("address", {})
     if addr.get("road"):
         return True
-    # A shop/amenity-class result is usually precise even if Nominatim
-    # didn't fill in 'road' for that specific POI.
     precise_classes = {"amenity", "shop", "tourism", "office", "leisure"}
     if result.get("class") in precise_classes:
         return True
@@ -179,20 +189,15 @@ def _is_precise_enough(result):
 def geocode_nominatim(name, raw_location):
     """raw_location is free text as typed by the person on the form:
     it could be just a city, a street + city, or just a street.
-    No longer restricted to countrycodes=nl, since Country is now also
-    derived from the result (in case entries outside NL show up someday).
-    Returns a dict with lat/lon/address/city/country, or None if there's
-    no reliable result."""
+    Returns a dict with address/city/country, or None if there's no
+    reliable result."""
     candidate_queries = [
-        f"{name}, {raw_location}",   # business name + whatever they typed
-        f"{raw_location}",            # in case raw_location is already "Street 5, City"
+        f"{name}, {raw_location}",
+        f"{raw_location}",
     ]
-
     for query in candidate_queries:
         result = _nominatim_call(query)
         if result and _is_precise_enough(result):
-            lat = float(result["lat"])
-            lon = float(result["lon"])
             addr = result.get("address", {})
             road = addr.get("road", "")
             house = addr.get("house_number", "")
@@ -202,40 +207,15 @@ def geocode_nominatim(name, raw_location):
                 or addr.get("municipality") or raw_location
             )
             country = addr.get("country", "")
-            return {
-                "lat": lat, "lon": lon, "address": address_line,
-                "city": city, "country": country,
-            }
-
+            return {"address": address_line, "city": city, "country": country}
     return None
 
 
-def build_synthetic_google_maps_url(name, lat, lon):
-    """Builds a Google Maps URL using the '!3d..!4d..' pattern that this
-    base's Airtable formulas already recognize (MapsURL formula's third
-    branch: contains '/place/' and '!3d' but not '/place/ChIJ' nor '!1s').
-
-    IMPORTANT: we append a harmless '!16sZ' suffix after '!4d{lon}'.
-    Without it, the Longitude formula breaks: it relies on
-    ISERROR(FIND("!", ...)) to detect "no more '!' after this point",
-    but Airtable's FIND() returns 0 (not an error) when nothing is found,
-    so ISERROR() never triggers and the formula computes a negative
-    length for MID(), producing an empty Longitude. Adding a trailing
-    '!' character (via '!16sZ') gives FIND() a real match to find, which
-    makes both the Longitude formula and MapsURL's own length
-    calculation resolve correctly and consistently.
-    """
-    safe_name = urllib.parse.quote(name.strip() or "restaurant")
-    return (
-        f"https://www.google.com/maps/place/{safe_name}/@{lat},{lon},17z"
-        f"!3d{lat}!4d{lon}!16sZ"
-    )
-
-
-def clean_maps_url(lat, lon):
-    """Exact equivalent of what Airtable's MapsURL formula produces for a
-    URL built with build_synthetic_google_maps_url()."""
-    return f"https://www.google.com/maps/@{lat},{lon},17z"
+def quick_search_link(name, hint):
+    """A ready-to-click Google Maps search link, so filling in the real
+    URL is just: click -> confirm it's the right place -> copy -> paste."""
+    query = ", ".join(part for part in (name, hint) if part)
+    return f"https://www.google.com/maps/search/{urllib.parse.quote(query)}"
 
 
 # ---------- Normalization / dedupe ----------
@@ -298,73 +278,54 @@ def main():
     entries = [normalize(r) for r in records]
 
     airtable_updates = []
-    needs_review = []          # no coordinates at all
-    needs_city_review = []     # coordinates OK, new city not confirmed yet
-    needs_country_review = []  # coordinates OK, new country not confirmed yet
-    newly_processed = []       # everything geocoded THIS run (for an accuracy review)
+    pending = []  # everything still missing a URL -> goes in the notification
 
     for e in entries:
         if e["URL"]:
-            continue  # already processed before, formulas already computed everything
+            continue  # already has a real URL -> formulas already computed everything, leave alone
 
         raw_location = e["City"] or e["CityForm"] or e["Address"]
-        if not e["Restaurant Name"] or not raw_location:
-            needs_review.append(e)
-            continue
+        fields_to_update = {}
+        geocode_note = None
 
-        result = geocode_nominatim(e["Restaurant Name"], raw_location)
-        if result is None:
-            needs_review.append(e)
-            continue
+        if e["Restaurant Name"] and raw_location:
+            result = geocode_nominatim(e["Restaurant Name"], raw_location)
+            if result:
+                if not e["Address"]:
+                    e["Address"] = result["address"]
+                    fields_to_update["Address"] = result["address"]
 
-        lat, lon = result["lat"], result["lon"]
-        synthetic_url = build_synthetic_google_maps_url(e["Restaurant Name"], lat, lon)
-        fields_to_update = {"URL": synthetic_url}
+                if not e["City"]:
+                    matched_city = match_existing_option(result["city"], city_options)
+                    if matched_city:
+                        e["City"] = matched_city
+                        fields_to_update["City"] = matched_city
+                    else:
+                        geocode_note = f"detected city not in the list yet: *{result['city']}*"
 
-        if not e["Address"]:
-            e["Address"] = result["address"]
-            fields_to_update["Address"] = result["address"]
+                if not e["Country"]:
+                    matched_country = match_existing_option(result["country"], country_options)
+                    if matched_country:
+                        e["Country"] = matched_country
+                        fields_to_update["Country"] = matched_country
+                    elif not geocode_note:
+                        geocode_note = f"detected country not in the list yet: *{result['country']}*"
+            else:
+                geocode_note = "could not auto-detect the location, please look it up manually"
 
-        matched_city = match_existing_option(result["city"], city_options)
-        if matched_city:
-            e["City"] = matched_city
-            fields_to_update["City"] = matched_city
-        else:
-            needs_city_review.append((e, result["city"]))
+        if fields_to_update:
+            airtable_updates.append({"id": e["id"], "fields": fields_to_update})
+            print(f"Pre-filled: {e['Restaurant Name']} -> {fields_to_update}")
 
-        matched_country = match_existing_option(result["country"], country_options)
-        if matched_country:
-            e["Country"] = matched_country
-            fields_to_update["Country"] = matched_country
-        else:
-            needs_country_review.append((e, result["country"]))
-
-        # Mirror in memory what Airtable's formulas will compute from this URL
-        e["URL"] = synthetic_url
-        e["Latitude"] = lat
-        e["Longitude"] = lon
-        e["MapsURL"] = clean_maps_url(lat, lon)
-
-        airtable_updates.append({"id": e["id"], "fields": fields_to_update})
-        newly_processed.append({
-            "entry": e,
-            "record_id": e["id"],
-            "geocoded_city": result["city"],
-            "geocoded_country": result["country"],
-            "matched_city": bool(matched_city),
-            "matched_country": bool(matched_country),
-        })
-        print(f"Geocoded: {e['Restaurant Name']} -> {e['Address']}, "
-              f"{matched_city or '(' + result['city'] + ' pending)'}, "
-              f"{matched_country or '(' + result['country'] + ' pending)'} "
-              f"({lat}, {lon})")
+        pending.append((e, geocode_note))
 
     if airtable_updates:
-        print(f"Writing {len(airtable_updates)} update(s) to Airtable...")
+        print(f"Writing {len(airtable_updates)} update(s) to Airtable (Address/City/Country only)...")
         push_updates_to_airtable(airtable_updates)
 
     # Only entries with coordinates, a confirmed city AND a confirmed
-    # country make it into the public JSON
+    # country make it into the public JSON (these all have a real URL
+    # already, since Latitude/Longitude only exist once a URL was pasted)
     publishable = [
         e for e in entries
         if e["Restaurant Name"] and e["Latitude"] and e["Longitude"] and e["City"] and e["Country"]
@@ -382,68 +343,39 @@ def main():
         fh.write("\n")
     print(f"{OUTPUT_PATH} updated with {len(publishable)} unique restaurants.")
 
-    # ---- Pending items report (persistent issue) ----
+    # ---- Pending submissions report (persistent issue -> email) ----
     lines = []
-    if needs_review:
-        lines.append("### Could not be geocoded\n")
+    if pending:
         lines.append(
-            "Could not be located automatically (missing info, or not "
-            "found on OpenStreetMap). Look them up on Google Maps and "
-            "paste the URL manually:\n"
+            "These submissions are still waiting for a Google Maps URL. "
+            "Where possible, Address/City/Country were already "
+            "auto-detected below for you to double-check while you paste "
+            "the URL in Airtable:\n"
         )
-        for e in needs_review:
+        for e, note in pending:
             hint = e["City"] or e["CityForm"] or e["Address"] or "(no location provided)"
+            search_link = quick_search_link(e["Restaurant Name"], e["Address"] or hint)
+            details = []
+            if e["Address"]:
+                details.append(f"Address: {e['Address']}")
+            if e["City"]:
+                details.append(f"City: {e['City']}")
+            if e["Country"]:
+                details.append(f"Country: {e['Country']}")
+            if note:
+                details.append(f"⚠️ {note}")
+            details_str = f" — {' | '.join(details)}" if details else ""
             lines.append(
-                f"- [ ] **{e['Restaurant Name'] or '(no name)'}** — {hint} — "
+                f"- [ ] **{e['Restaurant Name'] or '(no name)'}** — {hint}{details_str} — "
+                f"[🔍 Search on Google Maps]({search_link}) — "
                 f"[Open in Airtable]({record_link(e['id'])})"
             )
-        lines.append("")
-
-    if needs_city_review:
-        lines.append("### Coordinates ready, city needs confirming/creating\n")
-        for e, geocoded_city in needs_city_review:
-            lines.append(
-                f"- [ ] **{e['Restaurant Name']}** — detected city: *{geocoded_city}* — "
-                f"[Open in Airtable]({record_link(e['id'])})"
-            )
-        lines.append("")
-
-    if needs_country_review:
-        lines.append("### Coordinates ready, country needs confirming/creating\n")
-        for e, geocoded_country in needs_country_review:
-            lines.append(
-                f"- [ ] **{e['Restaurant Name']}** — detected country: *{geocoded_country}* — "
-                f"[Open in Airtable]({record_link(e['id'])})"
-            )
-        lines.append("")
 
     with open(REVIEW_PATH, "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
 
-    total_pending = len(needs_review) + len(needs_city_review) + len(needs_country_review)
-    if total_pending:
-        print(f"{total_pending} item(s) pending manual review (see {REVIEW_PATH}).")
-
-    # ---- New entries report for this run (a fresh issue every time) ----
-    new_lines = []
-    if newly_processed:
-        new_lines.append(
-            "These restaurants were geocoded automatically in this run. "
-            "Please double-check the location is correct (in case "
-            "Nominatim matched the wrong business with a similar name):\n"
-        )
-        for item in newly_processed:
-            e = item["entry"]
-            maps_link = clean_maps_url(e["Latitude"], e["Longitude"])
-            city_note = e["City"] if item["matched_city"] else f"⚠️ {item['geocoded_city']} (pending)"
-            country_note = e["Country"] if item["matched_country"] else f"⚠️ {item['geocoded_country']} (pending)"
-            new_lines.append(
-                f"- **{e['Restaurant Name']}** — {e['Address']}, {city_note}, {country_note} — "
-                f"[View on Google Maps]({maps_link}) — [Open in Airtable]({record_link(item['record_id'])})"
-            )
-
-    with open(NEW_ENTRIES_PATH, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(new_lines))
+    if pending:
+        print(f"{len(pending)} submission(s) waiting for a Maps URL (see {REVIEW_PATH}).")
 
 
 if __name__ == "__main__":
