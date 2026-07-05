@@ -2,11 +2,12 @@ name: Sync restaurants.json from Airtable
 
 on:
   schedule:
-    - cron: "0 5 * * *"
-  workflow_dispatch: {}
+    - cron: "0 5 * * *"   # every day at 05:00 UTC
+  workflow_dispatch: {}    # allows manual runs from the Actions tab
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   sync:
@@ -20,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Sync data from Airtable
+      - name: Sync data from Airtable (+ geocode)
         env:
           AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
           AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
@@ -34,8 +35,49 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add restaurants.json
           if git diff --cached --quiet; then
-            echo "Sin cambios, no se hace commit."
+            echo "No changes, skipping commit."
           else
             git commit -m "chore: sync restaurants.json from Airtable [skip ci]"
             git push
+          fi
+
+      - name: Notify pending manual review (persistent issue -> email)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh issue list --label needs-geocoding --state open --json number --jq '.[0].number' || true)
+
+          if [ -s needs_review.md ]; then
+            if [ -n "$EXISTING" ]; then
+              echo "Updating issue #$EXISTING"
+              gh issue edit "$EXISTING" --body-file needs_review.md
+            else
+              echo "Creating new pending-review issue"
+              gh issue create \
+                --title "Restaurants pending manual review" \
+                --body-file needs_review.md \
+                --label needs-geocoding
+            fi
+          else
+            if [ -n "$EXISTING" ]; then
+              echo "Everything resolved, closing issue #$EXISTING"
+              gh issue close "$EXISTING" --comment "Everything was resolved automatically. ✅"
+            else
+              echo "Nothing pending."
+            fi
+          fi
+
+      - name: Notify new entries this run (fresh issue -> email)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -s new_entries.md ]; then
+            TODAY=$(date -u +"%Y-%m-%d")
+            echo "Creating issue for today's new entries ($TODAY)"
+            gh issue create \
+              --title "New restaurants auto-geocoded - $TODAY" \
+              --body-file new_entries.md \
+              --label new-entries
+          else
+            echo "No new entries in this run."
           fi
