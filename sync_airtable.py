@@ -67,8 +67,14 @@ def airtable_request(url, method="GET", body=None):
         "Authorization": f"Bearer {AIRTABLE_TOKEN}",
         "Content-Type": "application/json",
     })
-    with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as err:
+        error_body = err.read().decode("utf-8", errors="replace")
+        print(f"Airtable API error {err.code} calling {method} {url}")
+        print(f"Response body: {error_body}")
+        raise
 
 
 def fetch_all_records():
