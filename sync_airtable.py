@@ -213,9 +213,23 @@ def geocode_nominatim(name, raw_location):
 def build_synthetic_google_maps_url(name, lat, lon):
     """Builds a Google Maps URL using the '!3d..!4d..' pattern that this
     base's Airtable formulas already recognize (MapsURL formula's third
-    branch: contains '/place/' and '!3d' but not '/place/ChIJ' nor '!1s')."""
+    branch: contains '/place/' and '!3d' but not '/place/ChIJ' nor '!1s').
+
+    IMPORTANT: we append a harmless '!16sZ' suffix after '!4d{lon}'.
+    Without it, the Longitude formula breaks: it relies on
+    ISERROR(FIND("!", ...)) to detect "no more '!' after this point",
+    but Airtable's FIND() returns 0 (not an error) when nothing is found,
+    so ISERROR() never triggers and the formula computes a negative
+    length for MID(), producing an empty Longitude. Adding a trailing
+    '!' character (via '!16sZ') gives FIND() a real match to find, which
+    makes both the Longitude formula and MapsURL's own length
+    calculation resolve correctly and consistently.
+    """
     safe_name = urllib.parse.quote(name.strip() or "restaurant")
-    return f"https://www.google.com/maps/place/{safe_name}/@{lat},{lon},17z!3d{lat}!4d{lon}"
+    return (
+        f"https://www.google.com/maps/place/{safe_name}/@{lat},{lon},17z"
+        f"!3d{lat}!4d{lon}!16sZ"
+    )
 
 
 def clean_maps_url(lat, lon):
@@ -334,6 +348,7 @@ def main():
         airtable_updates.append({"id": e["id"], "fields": fields_to_update})
         newly_processed.append({
             "entry": e,
+            "record_id": e["id"],
             "geocoded_city": result["city"],
             "geocoded_country": result["country"],
             "matched_city": bool(matched_city),
@@ -424,7 +439,7 @@ def main():
             country_note = e["Country"] if item["matched_country"] else f"⚠️ {item['geocoded_country']} (pending)"
             new_lines.append(
                 f"- **{e['Restaurant Name']}** — {e['Address']}, {city_note}, {country_note} — "
-                f"[View on Google Maps]({maps_link}) — [Open in Airtable]({record_link(e['id'])})"
+                f"[View on Google Maps]({maps_link}) — [Open in Airtable]({record_link(item['record_id'])})"
             )
 
     with open(NEW_ENTRIES_PATH, "w", encoding="utf-8") as fh:
