@@ -297,6 +297,17 @@
     "Comments": "approximately €4 for a 25cl bottle"
   },
   {
+    "Restaurant Name": "Bistro Mes Amis",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Hippolytusbuurt 10",
+    "Latitude": "52.0120809",
+    "Longitude": "4.3574525",
+    "MapsURL": "https://www.google.com/maps/@52.0120809,4.3574525,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5f00457f94f:0x9266cc899d55a3c1!8m2!3d52.0120809!4d4.3574525",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Blend one",
     "Country": "Netherlands",
     "City": "Voorburg",
@@ -1243,6 +1254,17 @@
     "Comments": "€7 for bottle"
   },
   {
+    "Restaurant Name": "Grand Café De Walrus",
+    "Country": "Netherlands",
+    "City": "Sneek",
+    "Address": "Leeuwenburg 11",
+    "Latitude": "53.0319762",
+    "Longitude": "5.6598405",
+    "MapsURL": "https://www.google.com/maps/@53.0319762,5.6598405,17z/data=!3m1!4b1!4m5!3m4!1s0x47c8f1cfb19643a3:0xd9ddcd4f3c04c5d0!8m2!3d53.0319762!4d5.6598405",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Grand Café Van Ruysdael",
     "Country": "Netherlands",
     "City": "Heemskerk",
@@ -1441,6 +1463,28 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "IKEA Swedish Restaurant",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Olof Palmestraat 1",
+    "Latitude": "52.012914",
+    "Longitude": "4.3816519",
+    "MapsURL": "https://www.google.com/maps/@52.012914,4.3816519,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5f0ee34a2a3:0x5743b55fcfbb0d64!8m2!3d52.012914!4d4.3816519",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "No tap water. Buy their fruitwater or mineral water. Some workers will give free tap water"
+  },
+  {
+    "Restaurant Name": "Indian Street Food & Co",
+    "Country": "Netherlands",
+    "City": "Amstelveen",
+    "Address": "Karel Doormanweg 16",
+    "Latitude": "52.3050371",
+    "Longitude": "4.869982",
+    "MapsURL": "https://www.google.com/maps/@52.3050371,4.869982,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60b59bbc474cf:0x5a077a476a382a7c!8m2!3d52.3050371!4d4.869982",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Indian Summer",
     "Country": "Netherlands",
     "City": "Enschede",
@@ -1595,6 +1639,17 @@
     "Comments": "0.5€ per glass, indicated on the menu"
   },
   {
+    "Restaurant Name": "Koperen kees",
+    "Country": "Netherlands",
+    "City": "Sneek",
+    "Address": "Parkstraat 1",
+    "Latitude": "53.0340347",
+    "Longitude": "5.6567831",
+    "MapsURL": "https://www.google.com/maps/@53.0340347,5.6567831,17z/data=!3m1!4b1!4m5!3m4!1s0x47c8f1d1ea02a11b:0xf9380ee005d0471b!8m2!3d53.0340347!4d5.6567831",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Krishna Aahar",
     "Country": "Netherlands",
     "City": "Eindhoven",
@@ -1738,6 +1793,17 @@
     "Comments": "Free tap water if at least one drink is ordered"
   },
   {
+    "Restaurant Name": "MARIE biostrandkot",
+    "Country": "Netherlands",
+    "City": "Oostkapelle",
+    "Address": "Strand Vrouwenpolder 40",
+    "Latitude": "51.5916879",
+    "Longitude": "3.6120233",
+    "MapsURL": "https://www.google.com/maps/@51.5916879,3.6120233!15sCh9CaW8gc3RyYW5ka290IE1hcmllIG9vc3RrYXBlbGxlWiEiH2JpbyBzdHJhbmRrb3QgbWFyaWUgb29zdGthcGVsbGWSAQ9iZWFjaF9wYXZpbGxpb26aASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTmlhRFUzWjBOQkVBReABAPoBBAgaEC8,17z/data=!3m1!4b1!4m5!3m4!1sBio+strandkot+Marie+oostkapelle!8m2!3d51.5916879!4d3.6120233!15sCh9CaW8gc3RyYW5ka290IE1hcmllIG9vc3RrYXBlbGxlWiEiH2JpbyBzdHJhbmRrb3QgbWFyaWUgb29zdGthcGVsbGWSAQ9iZWFjaF9wYXZpbGxpb26aASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTmlhRFUzWjBOQkVBReABAPoBBAgaEC8",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Markerhuisje",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -1769,6 +1835,17 @@
     "MapsURL": "https://www.google.com/maps/@52.3600721,4.8080575,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e3305e852b85:0x51e54e4cc728b3ac!8m2!3d52.3600721!4d4.8080575",
     "Tap Water Policy": "No, they charge high price",
     "Comments": "€3.50 for small water"
+  },
+  {
+    "Restaurant Name": "MOES",
+    "Country": "Netherlands",
+    "City": "Arnhem",
+    "Address": "Beeldhouwerstraat 74",
+    "Latitude": "51.9866001",
+    "Longitude": "5.9358819",
+    "MapsURL": "https://www.google.com/maps/@51.9866001,5.9358819,17z/data=!3m1!4b1!4m5!3m4!1s0x47c7a5ec12f1381f:0xfd35051258e72e9e!8m2!3d51.9866001!4d5.9358819",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
   },
   {
     "Restaurant Name": "Mori Japanese bistro",
@@ -1956,6 +2033,17 @@
     "MapsURL": "https://www.google.com/maps/@52.0831099,4.3048123,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b72b53c3bb31:0x1752c10809168f4b!8m2!3d52.0831099!4d4.3048123",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
+  },
+  {
+    "Restaurant Name": "Pata negra",
+    "Country": "Netherlands",
+    "City": "Leeuwarden",
+    "Address": "Uniabuurt 6",
+    "Latitude": "53.2004586",
+    "Longitude": "5.7984042",
+    "MapsURL": "https://www.google.com/maps/@53.2004586,5.7984042,17z/data=!3m1!4b1!4m5!3m4!1s0x47c8fe843ca534cd:0x775c1ab51e9928ee!8m2!3d53.2004586!4d5.7984042",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "Its tapas so common to ask money for water."
   },
   {
     "Restaurant Name": "Pavarotti Delft",
@@ -2519,6 +2607,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Tummy Treats",
+    "Country": "Netherlands",
+    "City": "Amstelveen",
+    "Address": "Westwijkplein 88",
+    "Latitude": "52.2821093",
+    "Longitude": "4.8267635",
+    "MapsURL": "https://www.google.com/maps/@52.2821093,4.8267635,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e06ad3c8690d:0xbbe872c552bb28c6!8m2!3d52.2821093!4d4.8267635",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Uluwatu Beach",
     "Country": "Netherlands",
     "City": "Hoek van Holland",
@@ -2715,6 +2814,17 @@
     "MapsURL": "https://www.google.com/maps/@51.9453814,4.4829461,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5cca83ec375db:0x57cd792e3e158d8d!8m2!3d51.9453814!4d4.4829461",
     "Tap Water Policy": "No, they charge high price",
     "Comments": "This was 3 years ago, when the place was called Yam Thai. A small \"pokals snaps\" glass of tap water was 2.5eur"
+  },
+  {
+    "Restaurant Name": "Yanagi Ramen",
+    "Country": "Netherlands",
+    "City": "Groningen",
+    "Address": "Gedempte Zuiderdiep 44",
+    "Latitude": "53.2146231",
+    "Longitude": "6.5678448",
+    "MapsURL": "https://www.google.com/maps/@53.2146231,6.5678448,17z/data=!3m1!4b1!4m5!3m4!1s0x47c9cdf79af5fea5:0x2ce13d92515b8f7d!8m2!3d53.2146231!4d6.5678448",
+    "Tap Water Policy": "Yes, at reasonable cost",
+    "Comments": "A carafe of 0,5l with ice and mint is 1,50€"
   },
   {
     "Restaurant Name": "YUSU",
