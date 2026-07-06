@@ -1760,6 +1760,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Lumbini",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Amstel 32",
+    "Latitude": 52.3669207,
+    "Longitude": 4.8952393,
+    "MapsURL": "https://www.google.com/maps/@52.3669207,4.8952393,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609e4ea51490d:0x751a8c64e2212061!8m2!3d52.3669207!4d4.8952393",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€6 for 0,75 liter"
+  },
+  {
     "Restaurant Name": "Madre",
     "Country": "Netherlands",
     "City": "Amsterdam",
