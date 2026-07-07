@@ -11,6 +11,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "100W Brewery",
+    "Country": "Netherlands",
+    "City": "Eindhoven",
+    "Address": "Bleekweg 1",
+    "Latitude": 51.435935,
+    "Longitude": 5.4847971,
+    "MapsURL": "https://www.google.com/maps/@51.435935,5.4847971,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6d8fd9630d14d:0x4f1620602c5006f9!8m2!3d51.435935!4d5.4847971",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€4,50 for a liter"
+  },
+  {
     "Restaurant Name": "160K Retro Video Arcade",
     "Country": "Netherlands",
     "City": "Rotterdam",
@@ -31,6 +42,17 @@
     "MapsURL": "https://www.google.com/maps/@51.9875063,5.9192282,17z/data=!3m1!4b1!4m5!3m4!1s0x47c7a509ebeb9285:0xf23c98efa842dcf6!8m2!3d51.9875063!4d5.9192282",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
+  },
+  {
+    "Restaurant Name": "Amore 2",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Reguliersdwarsstraat 27",
+    "Latitude": 52.3665739,
+    "Longitude": 4.8901387,
+    "MapsURL": "https://www.google.com/maps/@52.3665739,4.8901387,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609d70a5c2bf5:0xd178e277e11ededf!8m2!3d52.3665739!4d4.8901387",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "6€"
   },
   {
     "Restaurant Name": "AmsterTram",
@@ -218,6 +240,17 @@
     "MapsURL": "https://www.google.com/maps/@52.3642761,4.8842951,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609e901bf8287:0x3f4332d487068f95!8m2!3d52.3642761!4d4.8842951",
     "Tap Water Policy": "No, they charge high price",
     "Comments": "They refuse to give tap water when asked and say only bottle water is available, despite being a bar and serving a lot of alcohol, they do not offer free water with any alcohol."
+  },
+  {
+    "Restaurant Name": "Baryo Pilipinas",
+    "Country": "Netherlands",
+    "City": "Den Haag",
+    "Address": "Fluwelen Burgwal 51",
+    "Latitude": 52.0790234,
+    "Longitude": 4.3183577,
+    "MapsURL": "https://www.google.com/maps/@52.0790234,4.3183577,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b722e8927f87:0x8cf77f96973d0d4e!8m2!3d52.0790234!4d4.3183577",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€3 for one bottle"
   },
   {
     "Restaurant Name": "Beachclub Noderstraun",
@@ -880,6 +913,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Dara",
+    "Country": "Netherlands",
+    "City": "Amersfoort",
+    "Address": "Grote Koppel 5",
+    "Latitude": 52.1599166,
+    "Longitude": 5.3846166,
+    "MapsURL": "https://www.google.com/maps/@52.1599166,5.3846166,17z/data=!3m1!4b1!4m5!3m4!1s0x47c646a3cd17e2e3:0x155576d98db104cc!8m2!3d52.1599166!4d5.3846166",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "De Beuze",
     "Country": "Netherlands",
     "City": "Zierikzee",
@@ -1067,6 +1111,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Dr. Feelgood’s Burgers",
+    "Country": "Netherlands",
+    "City": "Eindhoven",
+    "Address": "Oude Stadsgracht 28",
+    "Latitude": 51.4359399,
+    "Longitude": 5.4822574,
+    "MapsURL": "https://www.google.com/maps/@51.4359399,5.4822574,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6d9debfc18d13:0xd9ce17a552a05069!8m2!3d51.4359399!4d5.4822574",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Duke of Tokyo",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -1166,6 +1221,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Fenan Klein Africa",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Jan Pieter Heijestraat 147",
+    "Latitude": 52.3612913,
+    "Longitude": 4.8650948,
+    "MapsURL": "https://www.google.com/maps/@52.3612913,4.8650948!15sChxGZW5hbiBLbGVpbiBBZnJpY2EgYW1zdGVyZGFtWh4iHGZlbmFuIGtsZWluIGFmcmljYSBhbXN0ZXJkYW2SARNlcml0cmVhbl9yZXN0YXVyYW504AEA,17z/data=!3m1!4b1!4m5!3m4!1sFenan+Klein+Africa+amsterdam!8m2!3d52.3612913!4d4.8650948!15sChxGZW5hbiBLbGVpbiBBZnJpY2EgYW1zdGVyZGFtWh4iHGZlbmFuIGtsZWluIGFmcmljYSBhbXN0ZXJkYW2SARNlcml0cmVhbl9yZXN0YXVyYW504AEA",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Fiaschetteria Pistoia",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -1217,6 +1283,17 @@
     "Latitude": 52.0037129,
     "Longitude": 4.3584464,
     "MapsURL": "https://www.google.com/maps/@52.0037129,4.3584464,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5b51bb39763:0xbe0dcb0cad390bf2!8m2!3d52.0037129!4d4.3584464",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Fonda Cafe Bar (Stedelijk Museum hall)",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Museumplein 10",
+    "Latitude": 52.3577419,
+    "Longitude": 4.8799319,
+    "MapsURL": "https://www.google.com/maps/@52.3577419,4.8799319,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60900797154bb:0x967ead76147677c8!8m2!3d52.3577419!4d4.8799319",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
@@ -1285,6 +1362,17 @@
     "MapsURL": "https://www.google.com/maps/@51.9372896,4.499544,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5cd00052f44dd:0x733cc3b936fd5e73!8m2!3d51.9372896!4d4.499544",
     "Tap Water Policy": "No, they charge high price",
     "Comments": "They didn't offer tap water, instead they provided \"their own water\" which has quite over priced"
+  },
+  {
+    "Restaurant Name": "Hanno",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Doelenplein 7",
+    "Latitude": 52.0144266,
+    "Longitude": 4.3588764,
+    "MapsURL": "https://www.google.com/maps/@52.0144266,4.3588764,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5572154cb55:0xe6e0ca8f236f4839!8m2!3d52.0144266!4d4.3588764",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
   },
   {
     "Restaurant Name": "HANNO - Groots café",
@@ -1848,6 +1936,28 @@
     "Comments": "€3.50 for small water"
   },
   {
+    "Restaurant Name": "Moak Pancakes",
+    "Country": "Netherlands",
+    "City": "Utrecht",
+    "Address": "Vinkenburgstraat 15",
+    "Latitude": 52.0923367,
+    "Longitude": 5.1180035,
+    "MapsURL": "https://www.google.com/maps/@52.0923367,5.1180035,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609df1a0731cb:0x4b40e7aa2243a747!8m2!3d52.0923367!4d5.1180035",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Moak Pancakes",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Ferdinand Bolstraat 11HS",
+    "Latitude": 52.3565045,
+    "Longitude": 4.8908032,
+    "MapsURL": "https://www.google.com/maps/@52.3565045,4.8908032!15sChdNT0FLIFBhbmNha2VzIGFtc3RlcmRhbVoZIhdtb2FrIHBhbmNha2VzIGFtc3RlcmRhbZIBEWJydW5jaF9yZXN0YXVyYW504AEA,17z/data=!3m1!4b1!4m5!3m4!1sMOAK+Pancakes+amsterdam!8m2!3d52.3565045!4d4.8908032!15sChdNT0FLIFBhbmNha2VzIGFtc3RlcmRhbVoZIhdtb2FrIHBhbmNha2VzIGFtc3RlcmRhbZIBEWJydW5jaF9yZXN0YXVyYW504AEA",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "MOES",
     "Country": "Netherlands",
     "City": "Arnhem",
@@ -2020,6 +2130,17 @@
     "Latitude": 52.0928674,
     "Longitude": 5.116691,
     "MapsURL": "https://www.google.com/maps/@52.0928674,5.116691,17z/data=!3m1!4b1!4m5!3m4!1s0x47c66f449d84135b:0x127b36b2253451be!8m2!3d52.0928674!4d5.116691",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Paindemie",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Kinkerstraat 122",
+    "Latitude": 52.366773,
+    "Longitude": 4.8699903,
+    "MapsURL": "https://www.google.com/maps/@52.366773,4.8699903,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609a998968b07:0xbc99360b93fda1e4!8m2!3d52.366773!4d4.8699903",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
@@ -2640,6 +2761,17 @@
     "Comments": "Drank €150 worth of wine, but we still had to pay for plain water"
   },
   {
+    "Restaurant Name": "Umai Ramen",
+    "Country": "Netherlands",
+    "City": "Utrecht",
+    "Address": "Brusselplein 89",
+    "Latitude": 52.0978548,
+    "Longitude": 5.0652894,
+    "MapsURL": "https://www.google.com/maps/@52.0978548,5.0652894,17z/data=!3m1!4b1!4m5!3m4!1s0x47c66f4ae92d6abb:0xbad0772f998b2d!8m2!3d52.0978548!4d5.0652894",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "Refused"
+  },
+  {
     "Restaurant Name": "Umaimon Leidseplein",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -2845,6 +2977,17 @@
     "Latitude": 52.3598821,
     "Longitude": 4.9110865,
     "MapsURL": "https://www.google.com/maps/@52.3598821,4.9110865,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609d76a2f11ab:0x6cb4d5ed74ffd45c!8m2!3d52.3598821!4d4.9110865",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Zahara Cocktailbar",
+    "Country": "Netherlands",
+    "City": "Den Haag",
+    "Address": "Zeekant 32",
+    "Latitude": 52.1069336,
+    "Longitude": 4.2713474,
+    "MapsURL": "https://www.google.com/maps/@52.1069336,4.2713474,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b098ecae5ae9:0x195ee31209a88104!8m2!3d52.1069336!4d4.2713474",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
