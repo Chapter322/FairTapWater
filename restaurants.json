@@ -902,6 +902,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Coffeecompany",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Markt 19",
+    "Latitude": 52.010969,
+    "Longitude": 4.35819,
+    "MapsURL": "https://www.google.com/maps/@52.010969,4.35819,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3c93a25d5:0x43c56966dec8c208!8m2!3d52.010969!4d4.35819",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Cupp",
     "Country": "Netherlands",
     "City": "Utrecht",
@@ -1096,6 +1107,17 @@
     "Latitude": 52.3819861,
     "Longitude": 4.88685,
     "MapsURL": "https://www.google.com/maps/@52.3819861,4.88685,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609ce66b25777:0x276d7d65f9cdaced!8m2!3d52.3819861!4d4.88685",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Delfts Brouwhuis",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Hippolytusbuurt 43",
+    "Latitude": 52.0123734,
+    "Longitude": 4.3567178,
+    "MapsURL": "https://www.google.com/maps/@52.0123734,4.3567178,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b55b6c22b1b1:0xbcf924c5e8e35458!8m2!3d52.0123734!4d4.3567178",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
@@ -1683,6 +1705,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Kek - De koffiebar van Delft",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Voldersgracht 27",
+    "Latitude": 52.0125804,
+    "Longitude": 4.3599222,
+    "MapsURL": "https://www.google.com/maps/@52.0125804,4.3599222,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c2f7f74a0b:0xc1aede3efb4c09c2!8m2!3d52.0125804!4d4.3599222",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Kikkie van de Prinsensluis",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -2145,6 +2178,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Pakhuis Leiden",
+    "Country": "Netherlands",
+    "City": "Leiden",
+    "Address": "Doelensteeg 8",
+    "Latitude": 52.1578475,
+    "Longitude": 4.4844235,
+    "MapsURL": "https://www.google.com/maps/@52.1578475,4.4844235,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5c6f23d66003d:0x5e51e2677ac99218!8m2!3d52.1578475!4d4.4844235",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Paon Bali",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -2339,6 +2383,17 @@
     "Latitude": 52.2193676,
     "Longitude": 5.1671434,
     "MapsURL": "https://www.google.com/maps/@52.2193676,5.1671434,17z/data=!3m1!4b1!4m5!3m4!1s0x47c66b646c31a8e7:0xd6107b396afbfde3!8m2!3d52.2193676!4d5.1671434",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Restaurant Sprezzatura",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Oude Delft 125",
+    "Latitude": 52.0107045,
+    "Longitude": 4.3564846,
+    "MapsURL": "https://www.google.com/maps/@52.0107045,4.3564846,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5dc2bdc5e7b:0x7274adb9a9bcf5ff!8m2!3d52.0107045!4d4.3564846",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
