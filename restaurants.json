@@ -550,6 +550,17 @@
     "Comments": "€3.50"
   },
   {
+    "Restaurant Name": "Café de Doelem",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Kloveniersburgwal 125",
+    "Latitude": 52.3683777,
+    "Longitude": 4.8967315,
+    "MapsURL": "https://www.google.com/maps/@52.3683777,4.8967315,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609bfbdb147bd:0xc7f26cbdd05aa9de!8m2!3d52.3683777!4d4.8967315",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "They don’t serve it "
+  },
+  {
     "Restaurant Name": "Café De Plak",
     "Country": "Netherlands",
     "City": "Nijmegen",
@@ -1624,6 +1635,17 @@
     "Latitude": 52.5141625,
     "Longitude": 6.0950038,
     "MapsURL": "https://www.google.com/maps/@52.5141625,6.0950038,17z/data=!3m1!4b1!4m5!3m4!1s0x47c7df300080a2ed:0x8c407430f4b772e7!8m2!3d52.5141625!4d6.0950038",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Jordy's Bakery Nieuwe Binnenweg",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "Address": "Nieuwe Binnenweg 97A",
+    "Latitude": 51.9160899,
+    "Longitude": 4.4681505,
+    "MapsURL": "https://www.google.com/maps/@51.9160899,4.4681505,17z/data=!3m1!4b1!4m5!3m4!1s0x47c434a271278899:0x1d6d3712e4f5fb33!8m2!3d51.9160899!4d4.4681505",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
@@ -2847,6 +2869,17 @@
     "MapsURL": "https://www.google.com/maps/@52.3452078,4.9082316,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609619817fa47:0xc54b8ebdf0473713!8m2!3d52.3452078!4d4.9082316",
     "Tap Water Policy": "Yes, at reasonable cost",
     "Comments": "€2 per person for unlimited chilled still or sparkling water"
+  },
+  {
+    "Restaurant Name": "Uurwerker",
+    "Country": "Netherlands",
+    "City": "Groningen",
+    "Address": "Uurwerkersplein 1",
+    "Latitude": 53.2187676,
+    "Longitude": 6.5615136,
+    "MapsURL": "https://www.google.com/maps/@53.2187676,6.5615136,17z/data=!3m1!4b1!4m5!3m4!1s0x47c9cd4fd14e8a67:0x6b76e5a9d577cc7b!8m2!3d53.2187676!4d6.5615136",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
   },
   {
     "Restaurant Name": "Vegetalian",
