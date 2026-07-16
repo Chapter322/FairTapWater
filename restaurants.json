@@ -374,6 +374,17 @@
     "Comments": "Tap water denied, only bottled available"
   },
   {
+    "Restaurant Name": "Boca Pinxtos",
+    "Country": "Netherlands",
+    "City": "Haarlem",
+    "Address": "Spaarnelaan 40",
+    "Latitude": 52.3801008,
+    "Longitude": 4.6389605,
+    "MapsURL": "https://www.google.com/maps/@52.3801008,4.6389605,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5ef697bbaa2cf:0x594af3a28f3ea6e5!8m2!3d52.3801008!4d4.6389605",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Boes & Beis",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -502,6 +513,17 @@
     "Latitude": 52.3712896,
     "Longitude": 4.8526246,
     "MapsURL": "https://www.google.com/maps/@52.3712896,4.8526246,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e26da97c598d:0xd583518516a2ee1d!8m2!3d52.3712896!4d4.8526246",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "Cafe de Merckt",
+    "Country": "Netherlands",
+    "City": "Tiel",
+    "Address": "Plein 37",
+    "Latitude": 51.8869169,
+    "Longitude": 5.4393451,
+    "MapsURL": "https://www.google.com/maps/@51.8869169,5.4393451!15sChNDYWZlIGRlIE1lcmNrdCB0aWVsWhUiE2NhZmUgZGUgbWVyY2t0IHRpZWySAQpyZXN0YXVyYW504AEA,17z/data=!3m1!4b1!4m5!3m4!1sCafe+de+Merckt+tiel!8m2!3d51.8869169!4d5.4393451!15sChNDYWZlIGRlIE1lcmNrdCB0aWVsWhUiE2NhZmUgZGUgbWVyY2t0IHRpZWySAQpyZXN0YXVyYW504AEA",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
@@ -935,6 +957,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Curry Heaven Indian Restaurant",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "Address": "Admiraal de Ruyterweg 20A",
+    "Latitude": 51.9273845,
+    "Longitude": 4.4873485,
+    "MapsURL": "https://www.google.com/maps/@51.9273845,4.4873485,17z/data=!3m1!4b1!4m5!3m4!1s0x47c433f2ceba534b:0x713e029ec4a45942!8m2!3d51.9273845!4d4.4873485",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Dara",
     "Country": "Netherlands",
     "City": "Amersfoort",
@@ -1129,6 +1162,17 @@
     "Latitude": 52.0123734,
     "Longitude": 4.3567178,
     "MapsURL": "https://www.google.com/maps/@52.0123734,4.3567178,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b55b6c22b1b1:0xbcf924c5e8e35458!8m2!3d52.0123734!4d4.3567178",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
+    "Restaurant Name": "DOWN TOWN",
+    "Country": "Netherlands",
+    "City": "Nijmegen",
+    "Address": "Kannenmarkt 16",
+    "Latitude": 51.8478609,
+    "Longitude": 5.8639051,
+    "MapsURL": "https://www.google.com/maps/@51.8478609,5.8639051,17z/data=!3m1!4b1!4m5!3m4!1s0x47c708440cb86217:0xa8a5db3ec8df3630!8m2!3d51.8478609!4d5.8639051",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
   },
@@ -2013,6 +2057,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Moeke Tiel",
+    "Country": "Netherlands",
+    "City": "Tiel",
+    "Address": "Ophemertsedijk 2",
+    "Latitude": 51.8835755,
+    "Longitude": 5.4373339,
+    "MapsURL": "https://www.google.com/maps/@51.8835755,5.4373339,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6f95c143eafef:0xbc6e9d73f11b6c46!8m2!3d51.8835755!4d5.4373339",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "MOES",
     "Country": "Netherlands",
     "City": "Arnhem",
@@ -2748,6 +2803,17 @@
     "MapsURL": "https://www.google.com/maps/@51.9153962,4.4758231,17z/data=!3m1!4b1!4m5!3m4!1s0x47c435971f6da23d:0x548d683271d40b5!8m2!3d51.9153962!4d4.4758231",
     "Tap Water Policy": "No, they charge high price",
     "Comments": "No free tapwater available. It's either full price bottled mineral or nothing. "
+  },
+  {
+    "Restaurant Name": "the good egg",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Wijnhaven 14",
+    "Latitude": 52.0109681,
+    "Longitude": 4.3577476,
+    "MapsURL": "https://www.google.com/maps/@52.0109681,4.3577476,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b53b63dd76bb:0x59e35fa96f75026d!8m2!3d52.0109681!4d4.3577476",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
   },
   {
     "Restaurant Name": "The Harvest",
