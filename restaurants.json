@@ -968,6 +968,28 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Dadawan",
+    "Country": "Netherlands",
+    "City": "Arnhem",
+    "Address": "Gele Rijders Plein 15",
+    "Latitude": 51.9832916,
+    "Longitude": 5.9092774,
+    "MapsURL": "https://www.google.com/maps/@51.9832916,5.9092774,17z/data=!3m1!4b1!4m5!3m4!1s0x47c7a5b4f24fd10d:0x5504aeecbebfaee7!8m2!3d51.9832916!4d5.9092774",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€3.10 for 330cl\n€6.80 for 750cl"
+  },
+  {
+    "Restaurant Name": "Dan Dan Noodles",
+    "Country": "Netherlands",
+    "City": "Utrecht",
+    "Address": "Voorstraat 94",
+    "Latitude": 52.0952507,
+    "Longitude": 5.1226706,
+    "MapsURL": "https://www.google.com/maps/@52.0952507,5.1226706,17z/data=!3m1!4b1!4m5!3m4!1s0x47c66f62235d7661:0xcbc113e1f0940626!8m2!3d52.0952507!4d5.1226706",
+    "Tap Water Policy": "Yes, for free",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Dara",
     "Country": "Netherlands",
     "City": "Amersfoort",
@@ -2376,6 +2398,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Pizzeria Da Salvatore",
+    "Country": "Netherlands",
+    "City": "Delft",
+    "Address": "Oude Delft 88",
+    "Latitude": 52.010436,
+    "Longitude": 4.3571527,
+    "MapsURL": "https://www.google.com/maps/@52.010436,4.3571527,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3ddef8a73:0xb44af47a4d782e3d!8m2!3d52.010436!4d4.3571527",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": ""
+  },
+  {
     "Restaurant Name": "Pizzeria Di Luca",
     "Country": "Netherlands",
     "City": "Amsterdam",
@@ -2627,6 +2660,17 @@
     "MapsURL": "https://www.google.com/maps/@52.3676808,4.9260018,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6090b73194e6b:0x1cbeda1a76d8b370!8m2!3d52.3676808!4d4.9260018",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
+  },
+  {
+    "Restaurant Name": "Strandtent Bula Ouddorp",
+    "Country": "Netherlands",
+    "City": "Ouddorp",
+    "Address": "Groenedijk 34a",
+    "Latitude": 51.8200624,
+    "Longitude": 3.8759551,
+    "MapsURL": "https://www.google.com/maps/@51.8200624,3.8759551,17z/data=!3m1!4b1!4m5!3m4!1s0x47c4f9eff50fec19:0xcc02347df0b68a53!8m2!3d51.8200624!4d3.8759551",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "Ze bieden geen kraanwater aan. Nadat ik er om vroeg zeiden ze nee."
   },
   {
     "Restaurant Name": "Strøming",
@@ -2924,6 +2968,17 @@
     "MapsURL": "https://www.google.com/maps/@52.3647717,4.8826598,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609e85e64cc03:0x699021099792d8d3!8m2!3d52.3647717!4d4.8826598",
     "Tap Water Policy": "Yes, for free",
     "Comments": ""
+  },
+  {
+    "Restaurant Name": "Umami by Han",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "Address": "Binnenrotte 140",
+    "Latitude": 51.9226586,
+    "Longitude": 4.4859489,
+    "MapsURL": "https://www.google.com/maps/@51.9226586,4.4859489,17z/data=!3m1!4b1!4m5!3m4!1s0x47c4335bb612fbc3:0x722dbe6d676ca2a2!8m2!3d51.9226586!4d4.4859489",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€5 per 0,75L. Kleinere opties niet beschikbaar."
   },
   {
     "Restaurant Name": "Utage Sake Bar",
