@@ -1419,6 +1419,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Fuku Ramen",
+    "Country": "Netherlands",
+    "City": "Amsterdam",
+    "Address": "Ingogostraat 14A",
+    "Latitude": 52.3552595,
+    "Longitude": 4.9258048,
+    "MapsURL": "https://www.google.com/maps/@52.3552595,4.9258048,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6091c7680cf8f:0x5108cdce4ee8fba3!8m2!3d52.3552595!4d4.9258048",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "€2.50 for unlimited still or sparkling water. No option to ask for tap water. "
+  },
+  {
     "Restaurant Name": "Grace Festive Restaurant",
     "Country": "Netherlands",
     "City": "Rotterdam",
@@ -1958,6 +1969,17 @@
     "Comments": "6 eur for 0.5 L still/sparkling water bottle"
   },
   {
+    "Restaurant Name": "Lou's Noodles & Dimsum",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "Address": "Soetensteeg 1",
+    "Latitude": 51.9191957,
+    "Longitude": 4.4826608,
+    "MapsURL": "https://www.google.com/maps/@51.9191957,4.4826608,17z/data=!3m1!4b1!4m5!3m4!1s0x47c43301d2ebd7cb:0xd720d62ab66cc00c!8m2!3d51.9191957!4d4.4826608",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "They charged for tap water! "
+  },
+  {
     "Restaurant Name": "LUA",
     "Country": "Netherlands",
     "City": "Zwolle",
@@ -2431,6 +2453,17 @@
     "Comments": ""
   },
   {
+    "Restaurant Name": "Ragu",
+    "Country": "Netherlands",
+    "City": "Leiden",
+    "Address": "Watersteeg 2",
+    "Latitude": 52.15613,
+    "Longitude": 4.4947017,
+    "MapsURL": "https://www.google.com/maps/@52.15613,4.4947017,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5c7e9630f5525:0x6aecc57268743815!8m2!3d52.15613!4d4.4947017",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": "They refuse to serve tap water"
+  },
+  {
     "Restaurant Name": "Restaurant Bla Bla",
     "Country": "Netherlands",
     "City": "Groningen",
@@ -2803,6 +2836,17 @@
     "MapsURL": "https://www.google.com/maps/@52.3102536,4.7623646,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5e10ea91a1395:0xcc73760031904780!8m2!3d52.3102536!4d4.7623646",
     "Tap Water Policy": "No, they charge high price",
     "Comments": "€5+"
+  },
+  {
+    "Restaurant Name": "Thais Restaurant Mallika",
+    "Country": "Netherlands",
+    "City": "Almere",
+    "Address": "Bandastraat 68",
+    "Latitude": 52.4033582,
+    "Longitude": 5.3041837,
+    "MapsURL": "https://www.google.com/maps/@52.4033582,5.3041837,17z/data=!3m1!4b1!4m5!3m4!1s0x47c63d579a17593f:0xe1438ed6d74b7d51!8m2!3d52.4033582!4d5.3041837",
+    "Tap Water Policy": "No, they charge high price",
+    "Comments": ""
   },
   {
     "Restaurant Name": "The Best Thai Food Delft",
